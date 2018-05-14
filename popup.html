@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Chrome Tab Autoreloader, that doesn't suck.... or atleast sucks less.">
+        <meta name="author" content="Brodie Davis">
+
+        <style>
+            body { 
+                min-width: 420px;
+                overflow-x: hidden;
+            }
+        </style>
+
+        <!-- Bootstrap core CSS -->
+        <link href="external/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="external/css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <script src="external/js/jquery-3.1.1.min.js"></script>
+        <script src="external/js/bootstrap.js"></script>
+        <script src="timesheetdb.js"></script>
+        <script src="popup.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h2 id="month-title"></h2>
+            <hr>
+            <div>
+                <div id="deltrek" class="panel-group" role="tablist" aria-multiselectable="true">
+                    <p>
+                        Welcome to tab reloader!
+                    </p>
+                    <code>
+                        there will be a JS editor here
+                    </code>
+                </div>
+                <hr>
+                <button id="save" type="button" class="btn btn-primary">Start Reloading</button>
+            </div>
+        </div>
+    </body>
+</html>
