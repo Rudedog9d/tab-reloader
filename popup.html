@@ -24,22 +24,25 @@
         <script src="external/js/bootstrap.js"></script>
         <script src="timesheetdb.js"></script>
         <script src="popup.js"></script>
+        <script src="CONSTANTS.js"></script>
     </head>
     <body>
         <div class="container-fluid">
             <h2 id="month-title"></h2>
             <hr>
             <div>
-                <div id="deltrek" class="panel-group" role="tablist" aria-multiselectable="true">
+                <div class="panel-group" role="tablist" aria-multiselectable="true">
                     <p>
                         Welcome to tab reloader!
                     </p>
                     <code>
                         there will be a JS editor here
                     </code>
+                    <p>reloading: <span id="reloading"></span></p>
                 </div>
                 <hr>
-                <button id="save" type="button" class="btn btn-primary">Start Reloading</button>
+                <button id="start" type="button" class="btn btn-primary">Start Reloading</button>
+                <button id="stop" type="button" class="btn btn-primary">Stop Reloading</button>
             </div>
         </div>
     </body>
