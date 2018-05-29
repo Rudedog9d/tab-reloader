@@ -2,5 +2,7 @@
  * Define Constants to be used between 
  * background and content scripts
  */
-START_ACTION = 'StartReloading'
-STOP_ACTION = 'StopReloading'
+const ACTIONS = {
+    START_RELOAD: 'StartReloading',
+    STOP_RELOAD: 'StopReloading'
+}

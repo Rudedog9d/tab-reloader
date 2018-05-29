@@ -90,12 +90,29 @@ function StopReloading() {
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
+        let success, err;
         console.log(sender.tab ?
                   "from a content script:" + sender.tab.url :
                   "from the extension");
-        if (request.action === START_ACTION)
+        if(!request.action) {
+            err = `must specify request.action`;
+            console.error(err)
+            success = false;
+        } else if (request.action === ACTIONS.START_RELOAD) {
             success = StartReloading();
-        else if (request.action === STOP_ACTION)
+        }
+        else if (request.action === ACTIONS.STOP_RELOAD) {
             success = StopReloading();
-        return sendResponse({success: success});
+        }
+        else {
+            err = `unknown action: ${request.action}`;
+            console.error(err)
+            success = false;
+        }
+
+        // Send response
+        return sendResponse({
+            success: success,
+            error: err
+        });
 });
